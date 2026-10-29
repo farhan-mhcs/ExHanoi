@@ -80,8 +80,16 @@ function exhanoi_4(A, B, C, D, n) {
 }
 
 function exhanoi_5(A, B, C, D, n) {
-    alert("your function is not complete")
-    return
+    if (n<=0){
+        return
+    }
+    exhanoi_5(A,B,C,D,n-1)
+    moves.push([A,B])
+    moves.push([B,C])
+    exhanoi_5(D,C,B,A,n-1)
+    moves.push([C,D])
+    exhanoi_5(A,B,C,D,n-1)
+
 }
 
 function moveDisks(from, to){
