@@ -69,8 +69,15 @@ function exhanoi_3(A, B, C, n) {
 }
 
 function exhanoi_4(A, B, C, D, n) {
-    alert("your function is not complete")
-    return
+    if (n <= 0){
+        return
+    }
+    exhanoi_4(A,B,C,D,n-1)
+    moves.push([A,D])
+    exhanoi_4(C,D,A,B,n-1)
+    moves.push([D,B])
+    moves.push([B,C])
+    exhanoi_4(A,B,C,D,n-1)
 }
 
 function exhanoi_5(A, B, C, D, n) {
