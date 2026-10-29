@@ -74,10 +74,9 @@ function exhanoi_4(A, B, C, D, n) {
     }
     exhanoi_4(A,B,C,D,n-1)
     moves.push([A,D])
-    exhanoi_4(C,D,A,B,n-1)
-    moves.push([D,B])
-    moves.push([B,C])
-    exhanoi_4(A,B,C,D,n-1)
+    hanoi(C,D,B,n-1)
+    moves.push([D,C])
+    hanoi(B,D,C,n-1)
 }
 
 function exhanoi_5(A, B, C, D, n) {
