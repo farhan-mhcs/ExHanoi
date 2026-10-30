@@ -89,8 +89,8 @@ function exhanoi_4(A, B, C, D, n) {
         return
     }
     exhanoi_4(A,B,C,D,n-1)
-    moves.push([A,D])
     hanoi(C,D,B,n-1)
+    moves.push([A,D])
     moves.push([D,C])
     hanoi(B,D,C,n-1)
 }
